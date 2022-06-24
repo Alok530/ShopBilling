@@ -1,5 +1,5 @@
 import React from 'react'
-import './Navbar.css';
+import './Navbar2.css';
 import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
 import LogoutIcon from '@mui/icons-material/Logout';
 import CalculateIcon from '@mui/icons-material/Calculate';
@@ -11,61 +11,56 @@ import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import DescriptionIcon from '@mui/icons-material/Description';
 import AutorenewIcon from '@mui/icons-material/Autorenew';
 import { Link } from 'react-router-dom';
-import CalculateOutlinedIcon from '@mui/icons-material/CalculateOutlined';
 
-function Navbar() {
+function Navbar2() {
     return (
         <>
-            <div className="navbarpage">
-                <div className="navbar">
-                    <Link to={'/addbuyer'} className="navbardiv">
+            <div className="navbarpage2">
+                <div className="navbar2">
+                    <Link to={'/addbuyer'} className="navbardiv2">
                         <div className='navbarIcon'><PersonAddAlt1Icon style={{ 'margin': '0px' }} /></div>
-                        <p>Ney Buyer</p>
+                        <p>New Buyer</p>
                     </Link>
-                    <Link to={'/update/buyer'} className="navbardiv">
+                    <Link to={'/update/buyer'} className="navbardiv2">
                         <div className='navbarIcon'><UpdateIcon style={{ 'margin': '0px' }} /></div>
                         <p>Update Buyer</p>
                     </Link>
-                    <Link to={'/buyer'} className="navbardiv">
+                    <Link to={'/buyer'} className="navbardiv2">
                         <div className='navbarIcon'><DescriptionIcon style={{ 'margin': '0px' }} /></div>
                         <p>Buyer Details</p>
                     </Link>
-                    <Link to={'/delete/buyer'} className="navbardiv">
+                    <Link to={'/delete/buyer'} className="navbardiv2">
                         <div className='navbarIcon'><PersonAddDisabledIcon style={{ 'margin': '0px' }} /></div>
                         <p>Delete Buyer</p>
                     </Link>
-                    <Link to={'/addproduct'} className="navbardiv">
+                    <Link to={'/addproduct'} className="navbardiv2">
                         <div className='navbarIcon'><NoteAddIcon style={{ 'margin': '0px' }} /></div>
                         <p>New Product</p>
                     </Link>
-                    <Link to={'/update/product'} className="navbardiv">
+                    <Link to={'/update/product'} className="navbardiv2">
                         <div className='navbarIcon'><AutorenewIcon style={{ 'margin': '0px' }} /></div>
                         <p>Update Product</p>
                     </Link>
-                    <Link to={'/product'} className="navbardiv">
+                    <Link to={'/product'} className="navbardiv2">
                         <div className='navbarIcon'><ReceiptLongIcon style={{ 'margin': '0px' }} /></div>
                         <p>Product Details</p>
                     </Link>
-                    <Link to={'/deleteproduct'} className="navbardiv">
+                    <Link to={'/deleteproduct'} className="navbardiv2">
                         <div className='navbarIcon'><DeleteForeverIcon style={{ 'margin': '0px' }} /></div>
                         <p>Delete Product</p>
                     </Link>
-                    <Link to={'/billing'} className="navbardiv">
+                    <Link to={'/billing'} className="navbardiv2">
                         <div className='navbarIcon'><CalculateIcon style={{ 'margin': '0px' }} /></div>
                         <p>Billing</p>
                     </Link>
-                    <Link to={'/logout'} className="navbardiv">
+                    <Link to={'/logout'} className="navbardiv2">
                         <div className='navbarIcon'><LogoutIcon style={{ 'margin': '0px' }} /></div>
                         <p>Logout</p>
                     </Link>
-                </div>
-                <div className="navbarmin">
-                    <div className="navlogo"><h2 className='m-0 fw-bolder'>ShopBilling</h2></div>
-                    <Link to={'/navbar2'} className="navmenu"><p>Menu</p></Link>
                 </div>
             </div>
         </>
     )
 }
 
-export default Navbar
+export default Navbar2
