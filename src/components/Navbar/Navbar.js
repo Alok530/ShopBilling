@@ -60,7 +60,7 @@ function Navbar() {
                     </Link>
                 </div>
                 <div className="navbarmin">
-                    <div className="navlogo"><h2 className='m-0 fw-bolder'>ShopBilling</h2></div>
+                    <Link to={'/'} className="navlogo"><h2 className='m-0 fw-bolder'>ShopBilling</h2></Link>
                     <Link to={'/navbar2'} className="navmenu"><p>Menu</p></Link>
                 </div>
             </div>

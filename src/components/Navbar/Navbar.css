@@ -45,7 +45,11 @@
 }
 .navlogo{
     color: navy;    
+    text-decoration: none;
     font-weight: 700;
+}
+.navlogo h2{
+    color: navy;
 }
 .navmenu{
     background-color: navy;
