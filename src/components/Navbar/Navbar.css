@@ -85,6 +85,8 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
     .navbarpage{
         background-color: white;
