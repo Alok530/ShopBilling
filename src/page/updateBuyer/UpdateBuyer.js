@@ -6,7 +6,7 @@ function UpdateBuyer() {
         <>
             <div className="addproductpage">
                 <div className="addproduct">
-                    <h3 className='fw-bold mb-4'>Update Buyer</h3>
+                    <h3 className='fw-bold mb-4' style={{'color':'navy'}}>Update Buyer</h3>
                     <form class="row g-3">
                         <div class="col-12">
                             <label for="inputEmail4" class="form-label">Name</label>

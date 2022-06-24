@@ -6,7 +6,7 @@ function ProductDetail() {
         <>
             <div className="addproductpage">
                 <div className="addproduct">
-                    <h3 className='fw-bold mb-2'>Product Details</h3>
+                    <h3 className='fw-bold mb-2' style={{'color':'navy'}}>Product Details</h3>
                     <form class="row g-3">
                         <div class="col-12">
                             <label for="inputEmail4" class="form-label">Product Id</label>
