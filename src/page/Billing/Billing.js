@@ -7,8 +7,9 @@ function Billing() {
             <div className="billingpage">
                 <div className="billing">
                     <form className="row g-2">
+                        <h1 className='m-0 fw-bolder text-center mt-2 mb-1' style={{'color':'navy'}}>Billing</h1>
                         <div className="billdiv1 row g-2">
-                            <h4 className='m-0 mt-3 fw-bold'>Buyer Details</h4>
+                            <h4 className='m-0 mt-1 fw-bold success'>Buyer Details</h4>
                             <div className="col-md-4">
                                 <label for="inputEmail4" className="form-label">Name</label>
                                 <input type="text" className="form-control" id="inputEmail4" placeholder='Alok Kumar Rai' />
@@ -95,7 +96,7 @@ function Billing() {
                             </div>
                             <div className="col-md-4">
                                 <h4 className='m-0 fw-bold mb-2'>Calculation</h4>
-                                <div className="row g-3 align-items-center">
+                                <div className="row g-3 align-items-center mb-2">
                                     <div className="col-6">
                                         <label for="inputPassword6" className="col-form-label">Total</label>
                                     </div>
