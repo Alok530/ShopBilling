@@ -7,6 +7,7 @@ import Addproduct from './page/AddNewProduct/Addproduct';
 import ProductDetail from './page/ProductDetail/ProductDetail';
 import BuyerDetail from './page/BuyerDetail/BuyerDetail';
 import UpdateProduct from './page/UpdateProduct/UpdateProduct';
+import DeleteProduct from './page/DeleteProduct/DeleteProduct';
 import UpdateBuyer from './page/updateBuyer/UpdateBuyer';
 import Navbar2 from './components/Navbar2/Navbar2';
 import '../src/page/Home/Home.css';
@@ -25,6 +26,7 @@ function App() {
           <Route path="/product" element={<ProductDetail />} />
           <Route path="/buyer" element={<BuyerDetail />} />
           <Route path="/update/product" element={<UpdateProduct />} />
+          <Route path="/delete/product" element={<DeleteProduct />} />
           <Route path="/update/buyer" element={<UpdateBuyer />} />
         </Routes>
       </div>
