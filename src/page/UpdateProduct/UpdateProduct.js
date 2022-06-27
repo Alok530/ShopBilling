@@ -10,7 +10,7 @@ function UpdateProduct() {
     const [price, setprice] = useState(0);
     const [quantity, setquantity] = useState(0);
     const [status, setstatus] = useState(true);
-    const [productid, setproductid] = useState(1);
+    const [productid, setproductid] = useState(2);
 
     const findproduct = async () => {
         try {
@@ -57,7 +57,7 @@ function UpdateProduct() {
                         </div>
                         <div className="col-12">
                             <label for="inputEmail4" className="form-label">Product Name</label>
-                            <input type="text" value={productname} required minLength={3} maxLength={16} className="form-control" onChange={(e) => { setproductname(e.target.value) }} id="inputEmail4" placeholder='Milk Biskit' />
+                            <input type="text" value={productname} required minLength={3} maxLength={16} className="form-control fw-bold" onChange={(e) => { setproductname(e.target.value) }} id="inputEmail4" placeholder='Milk Biskit' />
                         </div>
                         <div className="col-12">
                             <label for="inputAddress2" className="form-label">Product Desc</label>

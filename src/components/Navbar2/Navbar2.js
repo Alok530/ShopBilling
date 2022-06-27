@@ -45,7 +45,7 @@ function Navbar2() {
                         <div className='navbarIcon'><ReceiptLongIcon style={{ 'margin': '0px' }} /></div>
                         <p>Product Details</p>
                     </Link>
-                    <Link to={'/deleteproduct'} className="navbardiv2">
+                    <Link to={'/delete/product'} className="navbardiv2">
                         <div className='navbarIcon'><DeleteForeverIcon style={{ 'margin': '0px' }} /></div>
                         <p>Delete Product</p>
                     </Link>

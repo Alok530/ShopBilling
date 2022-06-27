@@ -5,23 +5,24 @@ import axios from 'axios';
 const host = 'http://localhost:5000/api/';
 
 function ProductDetail() {
-    const [productname, setproductname] = useState("");
-    const [productdesc, setproductdesc] = useState("");
+    const [productname, setproductname] = useState("--");
+    const [productdesc, setproductdesc] = useState("--");
     const [price, setprice] = useState(0);
     const [quantity, setquantity] = useState(0);
     const [status, setstatus] = useState(true);
-    const [productid, setproductid] = useState(1);
+    const [productid, setproductid] = useState(3);
 
     const findproduct = async () => {
         try {
             let shopid = "62b1ba0476655fecff2a1d5c";
             const response = await axios.get(host + `product/${productid}/${shopid}`);
-            setproductid(response.data.productid);
-            setprice(response.data.price);
-            setproductname(response.data.productname);
+            console.log(response.data);
+            setproductid(response.data.isExist.productid);
+            setprice(response.data.isExist.price);
+            setproductname(response.data.isExist.productname);
             setproductdesc("");
-            setquantity(response.data.quantity);
-            setstatus(response.data.status);
+            setquantity(response.data.isExist.quantity);
+            setstatus(response.data.isExist.status);
         } catch (error) {
             console.log('error inside findquantity', error);
         }
