@@ -1,0 +1,29 @@
+.navbarfront{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    position: sticky;
+    top: 0px;
+    z-index: 22;
+    background-color: navy;
+}
+.navfront{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    color: white;
+}
+.navfrontlink{
+    color: white;
+    text-decoration: none;
+}
+.navfrontlink p{
+    margin: 0px;
+}
+.navfrontlink:hover{
+    color: white;
+}

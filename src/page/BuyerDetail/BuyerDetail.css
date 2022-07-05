@@ -16,7 +16,9 @@
     border-radius: 4px;
     background-color: white;
 }
-
+.addproduct form{
+    width: 100%;
+}
 @media (max-width:700px){
     .addproduct{
         width: 96%;

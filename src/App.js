@@ -11,11 +11,14 @@ import DeleteProduct from './page/DeleteProduct/DeleteProduct';
 import UpdateBuyer from './page/updateBuyer/UpdateBuyer';
 import Navbar2 from './components/Navbar2/Navbar2';
 import '../src/page/Home/Home.css';
+import Login from './page/login/Login';
+import Register from './page/register/Register';
+import NavbarFront from './components/navbarfront/NavbarFront';
 
 function App() {
   return (
     <>
-      <Navbar />
+    {window.localStorage.getItem('shopid')?<Navbar />:<NavbarFront/>}
       <div className="homepage">
         <Routes>
           <Route path="/" element={<Billing />} />
@@ -28,6 +31,8 @@ function App() {
           <Route path="/update/product" element={<UpdateProduct />} />
           <Route path="/delete/product" element={<DeleteProduct />} />
           <Route path="/update/buyer" element={<UpdateBuyer />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </div>
     </>
