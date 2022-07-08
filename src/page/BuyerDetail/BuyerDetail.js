@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import './BuyerDetail.css';
+import Navbar from '../../components/Navbar/Navbar';
+import NavbarFront from '../../components/navbarfront/NavbarFront';
 
 const host = 'http://localhost:5000/api/';
 
@@ -30,6 +32,7 @@ function BuyerDetail() {
 
     return (
         <>
+            {window.localStorage.getItem('shopid') ? <Navbar /> : <NavbarFront />}
             <div className="addproductpage">
                 <div className="addproduct">
                     <h3 className='fw-bold mb-2' style={{ 'color': 'navy' }}>Buyer Details</h3>

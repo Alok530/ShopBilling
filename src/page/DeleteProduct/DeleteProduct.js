@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './BuyerDetail.css';
 import axios from 'axios';
+import Navbar from '../../components/Navbar/Navbar';
+import NavbarFront from '../../components/navbarfront/NavbarFront';
 
 const host = 'http://localhost:5000/api/';
 
@@ -32,18 +34,19 @@ function ProductDetail() {
         findproduct();
     }, [])
 
-    const submitfun=async(event)=>{
+    const submitfun = async (event) => {
         event.preventDefault();
         try {
             let shopid = "62b1ba0476655fecff2a1d5c";
-            await axios.get(host+`product/deleteproduct/${productid}/${shopid}`);
+            await axios.get(host + `product/deleteproduct/${productid}/${shopid}`);
         } catch (error) {
-            console.log('error inside deleteproduct',error);
+            console.log('error inside deleteproduct', error);
         }
     }
 
     return (
         <>
+            {window.localStorage.getItem('shopid') ? <Navbar /> : <NavbarFront />}
             <div className="addproductpage">
                 <div className="addproduct">
                     <h3 className='fw-bold mb-2' style={{ 'color': 'navy' }}>Delete Product</h3>

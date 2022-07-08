@@ -1,10 +1,20 @@
 import React, { useState, useEffect } from 'react';
+import Navbar from '../../components/Navbar/Navbar';
+import NavbarFront from '../../components/navbarfront/NavbarFront';
 import axios from 'axios';
 import './Billing.css';
+import { useNavigate } from 'react-router-dom';
 
 const host = 'http://localhost:5000/api/';
 
 function Billing() {
+    const navigate = useNavigate();
+    useEffect(() => {
+        if (!window.localStorage.getItem('shopid')) {
+            navigate('/login');
+        }
+    }, [])
+
     const [name, setname] = useState("");
     const [mobile, setmobile] = useState("");
     const [address, setaddress] = useState("--");
@@ -36,7 +46,7 @@ function Billing() {
             const response = await axios.get(host + 'product/' + productid + "/" + shopid);
             if (response.data.success) {
                 setproductname(response.data.isExist.productname); setrate(response.data.isExist.price);
-            }else{
+            } else {
                 setproductname("--"); setrate(0); setquantity(1);
             }
         } catch (error) {
@@ -47,7 +57,7 @@ function Billing() {
     const additemfun = async (e) => {
         e.preventDefault();
         try {
-            if(productid==" " || productname==="--" || rate==0){
+            if (productid == " " || productname === "--" || rate == 0) {
                 return;
             }
             let i;
@@ -109,9 +119,9 @@ function Billing() {
                 'mobile': mobile,
                 'address': address,
             };
-            const response = await axios.post(host+'billing/sell', { items, buyer, shopid, total });
+            const response = await axios.post(host + 'billing/sell', { items, buyer, shopid, total });
             console.log(response.data);
-            if(response.data.success==true){
+            if (response.data.success == true) {
                 resetfun(e);
             }
         } catch (error) {
@@ -121,6 +131,7 @@ function Billing() {
 
     return (
         <>
+            {window.localStorage.getItem('shopid') ? <Navbar /> : <NavbarFront />}
             <div className="billingpage">
                 <div className="billing">
                     <form className="row g-2" onSubmit={submitfun}>
@@ -129,7 +140,7 @@ function Billing() {
                             <h4 className='m-0 mt-1 fw-bold success'>Buyer Details</h4>
                             <div className="col-md-6">
                                 <label className="form-label">Name</label>
-                                <input required value={name} onChange={(e) => { setname(e.target.value) }} type="text" className="form-control" id="inputEmail4" placeholder='Enter Buyer Name'/>
+                                <input required value={name} onChange={(e) => { setname(e.target.value) }} type="text" className="form-control" id="inputEmail4" placeholder='Enter Buyer Name' />
                             </div>
                             <div className="col-md-6">
                                 <label className="form-label">Contact No</label>

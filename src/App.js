@@ -14,25 +14,27 @@ import '../src/page/Home/Home.css';
 import Login from './page/login/Login';
 import Register from './page/register/Register';
 import NavbarFront from './components/navbarfront/NavbarFront';
+import Error from './components/errorpage/Error';
 
 function App() {
   return (
     <>
-    {window.localStorage.getItem('shopid')?<Navbar />:<NavbarFront/>}
       <div className="homepage">
         <Routes>
-          <Route path="/" element={<Billing />} />
-          <Route path="/navbar2" element={<Navbar2 />} />
-          <Route path="/billing" element={<Billing />} />
-          <Route path="/addbuyer" element={<AddBuyer />} />
-          <Route path="/addproduct" element={<Addproduct />} />
-          <Route path="/product" element={<ProductDetail />} />
-          <Route path="/buyer" element={<BuyerDetail />} />
-          <Route path="/update/product" element={<UpdateProduct />} />
-          <Route path="/delete/product" element={<DeleteProduct />} />
-          <Route path="/update/buyer" element={<UpdateBuyer />} />
+          <Route path="/" element={<Login />} />
+          {window.localStorage.getItem('shopid') ? <><Route path="/" element={<Billing />} />
+            <Route path="/navbar2" element={<Navbar2 />} />
+            <Route path="/addbuyer" element={<AddBuyer />} />
+            <Route path="/billing" element={<Billing />} />
+            <Route path="/addproduct" element={<Addproduct />} />
+            <Route path="/product" element={<ProductDetail />} />
+            <Route path="/buyer" element={<BuyerDetail />} />
+            <Route path="/update/product" element={<UpdateProduct />} />
+            <Route path="/delete/product" element={<DeleteProduct />} />
+            <Route path="/update/buyer" element={<UpdateBuyer />} /></> : ''}
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="*" element={<Error />} />
         </Routes>
       </div>
     </>

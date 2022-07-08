@@ -12,8 +12,14 @@ import DescriptionIcon from '@mui/icons-material/Description';
 import AutorenewIcon from '@mui/icons-material/Autorenew';
 import { Link } from 'react-router-dom';
 import CalculateOutlinedIcon from '@mui/icons-material/CalculateOutlined';
+import { useNavigate } from 'react-router-dom';
 
 function Navbar() {
+    const navigate = useNavigate();
+    const logoutfun=()=>{
+        window.localStorage.removeItem('shopid');
+        navigate('/');
+    }
     return (
         <>
             <div className="navbarpage">
@@ -54,10 +60,14 @@ function Navbar() {
                         <div className='navbarIcon'><CalculateIcon style={{ 'margin': '0px' }} /></div>
                         <p>Billing</p>
                     </Link>
-                    <Link to={'/logout'} className="navbardiv">
+                    {/*<Link to={'/'} className="navbardiv">
                         <div className='navbarIcon'><LogoutIcon style={{ 'margin': '0px' }} /></div>
                         <p>Logout</p>
-                    </Link>
+    </Link>*/}
+                    <div className="navbardiv" onClick={()=>{logoutfun()}}>
+                        <div className='navbarIcon'><LogoutIcon style={{ 'margin': '0px' }} /></div>
+                        <p>Logout</p>
+                    </div>
                 </div>
                 <div className="navbarmin">
                     <Link to={'/'} className="navlogo"><h2 className='m-0 fw-bolder'>BillingApp</h2></Link>

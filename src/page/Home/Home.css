@@ -2,20 +2,9 @@
     width: 100%;
     box-sizing: border-box;
     min-height: 100vh;
-    padding: 0px 12px;
     background-color: #dadada;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 .homediv h1{
     color: navy;
     font-weight: 700;
-}
-
-@media(max-width:700px){
-    .homepage{
-        padding: 25px 0px;
-    }
 }
